@@ -1,6 +1,3 @@
-// we will use fetch api (not available in node.js)
-//this js file is 'client side'
-
 function getWeather(address) {
   fetch('http://localhost:3000/weather?address='+address).then((response)=>{
     let infoHtml = document.getElementById('weatherInfo')
