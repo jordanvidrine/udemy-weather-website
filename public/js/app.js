@@ -1,5 +1,6 @@
 function getWeather(address) {
-  fetch('http://localhost:3000/weather?address='+address).then((response)=>{
+  //local host doesnt exist on heroku
+  fetch('/weather?address='+address).then((response)=>{
     let infoHtml = document.getElementById('weatherInfo')
     response.json().then((data) => {
       if (data.error) {
